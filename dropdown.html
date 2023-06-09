@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Menu Dropdown</title>
+
+        <link rel="stylesheet" href="dropdown.css">
+    </head>
+    <body>
+        <div class="dropdown">
+            <button>Técnico em Informática para a Internet</button>
+            <ul>
+                <li><a href="#" id="aluno-1" onclick="selecionar(1)">Luís Antônio</a></li>
+                <li><a href="#" id="aluno-2" onclick="selecionar(2)">Júlio Cesar</a></li>
+                <li><a href="#" id="aluno-3" onclick="selecionar(3)">Anderson Leigo</a></li>
+                <li><a href="#" id="aluno-4" onclick="selecionar(4)">Vitor Pescador</a></li>
+            </ul>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('button').click(function(){
+                    $('ul').toggleClass('active')
+                })
+            })
+        </script>
+
+        <script type="text/javascript">
+            function selecionar(aluno_selecionado) {
+                aluno = document.getElementById('aluno-' + aluno_selecionado)
+
+                const VERDE = 'rgb(0, 128, 0)'
+                const PRETO = '#262626'
+
+                if(aluno.style.backgroundColor == VERDE) {
+                    aluno.style.backgroundColor = PRETO
+                } else {
+                    aluno.style.backgroundColor = VERDE
+                }
+            }
+        </script>
+    </body>
+</html>

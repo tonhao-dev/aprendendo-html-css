@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+	<head>
+		<title>Super Mario</title>
+        <link rel="stylesheet" type="text/css" href="mario.css"/>
+
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+	</head>
+	<body onmousemove="renderizar()">
+        <div id="whois">
+            wwwrrrrrwwwwj
+            wwrrrrrrrrrwj
+            wwbbboobowwwj
+            wbobooobooowj
+            wbobboooboooj
+            wbboooobbbbwj
+            wwwoooooowwwj
+            wwbbrbbbwwwwj
+            wbbbrbbrbbbwj
+            bbbbrrrrbbbbj
+            oobryrryrbooj
+            ooorrrrrroooj
+            oorrrrrrrrooj
+            wwrrrwwrrrwwj
+            wbbbwwwwbbbwj
+            bbbbwwwwbbbbj
+        </div>
+
+        <script type="text/javascript">
+            let whois = document.getElementById('whois');
+            let str = whois.innerHTML;
+
+            str = str.replace(/w/g, "<div class='w'></div>");
+            str = str.replace(/r/g, "<div class='r'></div>");
+            str = str.replace(/o/g, "<div class='o'></div>");
+            str = str.replace(/b/g, "<div class='b'></div>");
+            str = str.replace(/y/g, "<div class='y'></div>");
+            str = str.replace(/j/g, "<br>");
+
+            whois.innerHTML = str;
+        </script>
+	</body>
+</html>

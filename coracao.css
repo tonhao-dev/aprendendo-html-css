@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+html, body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.heart {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform: rotate(-135deg);
+    margin: 15% auto;
+    background-color: #e74c3c;
+    animation: pulse 1s infinite alternate;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: #e74c3c;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #e74c3c;
+}
+
+.top {
+    top: 50%;
+}
+
+.left {
+    left: 50%;
+}
+
+#nome {
+    position: absolute;
+    top: 36%;
+    left: 46%;
+    z-index: 2;
+    animation: name_pulse 1s infinite alternate;
+    color: #fff;
+    font-family: 'Verdana', sans-serif;
+}
+
+@keyframes pulse {
+    0% {transform: scale(0.9) rotate(-135deg);}
+    100% {transform: scale(1.1) rotate(-135deg);}
+}
+
+@keyframes name_pulse {
+    0% {transform: scale(0.9);}
+    100% {transform: scale(1.1);}
+}
+
+@media (max-width: 600px) {
+    .heart {
+        margin: 60% auto;
+        width: 150px;
+        height: 150px;
+    }
+
+    .square {
+        width: 150px;
+        height: 150px;
+    }
+
+    .circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    #nome {
+        top: 240px;
+        left: 140px;
+    }
+}

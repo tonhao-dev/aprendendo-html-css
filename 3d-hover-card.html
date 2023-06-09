@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>3d-hover-card</title>
+        <meta charset="utf-8"/>
+
+        <link rel="stylesheet" type="text/css" href="swiper.min.css"/>
+        <link rel="stylesheet" type="text/css" href="3d-hover-card.css"/>
+
+        <script src="3d-hover-card.js"></script>
+    </head>
+    <body>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card" id="cartao1">                        
+                        <div id="nome-turma" class="sliderText">
+                            <h3>Informática 4° Ano</h3>
+                        </div>
+
+                        <div class="content">
+                            <p>Dias de almoço: Segunda e Quarta</p>
+
+                            <a href="#" onclick="editar_turma(1)" class="btn-card">Editar</a>
+                            <a href="#" onclick="excluir_turma(1)" class="btn-card">Excluir</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card" id="cartao2">
+                        <div class="sliderText">
+                            <h3>Redes 1° Ano</h3>
+                        </div>
+
+                        <div class="content">
+                            <p>Dias de almoço: Segunda e Quarta</p>
+
+                            <a href="#" onclick="editar_turma(2)" class="btn-card">Editar</a>
+                            <a href="#" onclick="excluir_turma(2)" class="btn-card">Excluir</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card" id="cartao3">
+                        <div class="sliderText">
+                            <h3>Edificações 3° Ano</h3>
+                        </div>
+
+                        <div class="content">
+                            <p>Dias de almoço: Segunda e Quarta</p>
+
+                            <a href="#" onclick="editar_turma(3)" class="btn-card">Editar</a>
+                            <a href="#" onclick="excluir_turma(3)" class="btn-card">Excluir</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card" id="cartao4">
+                        <div class="sliderText">
+                            <h3>IPI - 3° Ano</h3>
+                        </div>
+
+                        <div class="content">
+                            <p>Dias de almoço: Segunda e Quarta</p>
+
+                            <a href="#" onclick="editar_turma(4)" class="btn-card">Editar</a>
+                            <a href="#" onclick="excluir_turma(4)" class="btn-card">Excluir</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card" id="cartao5">
+                        <div class="sliderText">
+                            <h3>Edificações 2° Ano "A"</h3>
+                        </div>
+
+                        <div class="content">
+                            <p>Dias de almoço: Segunda e Quarta</p>
+
+                            <a href="#" onclick="editar_turma(5)" class="btn-card">Editar</a>
+                            <a href="#" onclick="excluir_turma(5)" class="btn-card">Excluir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="swiper.min.js"></script>
+        <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 30,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows : true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+body {
+    height: 100vh;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+#whois {
+    display: block;
+    width: 100%;
+}
+
+.w, .r, .b, .o, .y {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-top: -4px;
+}
+
+.r {
+    background-color: #fb0405;
+}
+
+.b {
+    background-color: #7d5307;
+}
+
+.o {
+    background-color: #ff9f10;
+}
+
+.y {
+    background-color: #f6a412;
+}
